@@ -5,7 +5,14 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  
+  // Wait 2 seconds for the progress bar to finish
+  setTimeout(() => {
+    preloader.classList.add("loaded");
+  }, 2200); // 2.2 seconds to allow a small buffer
+});
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
